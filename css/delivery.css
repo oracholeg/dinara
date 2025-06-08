@@ -214,7 +214,7 @@ body::after {
   min-height: 100%;
   display: flex;
   flex-direction: column;
-  overflow: hidden
+  overflow: visible !important;
 }
 @supports (overflow:clip) {
   .wrapper {
