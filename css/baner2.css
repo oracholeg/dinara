@@ -215,6 +215,11 @@ html {
     border-bottom: 1px solid black;
 }
 
+form {
+  width: 100%;
+  display: flex;
+}
+
 .baner_input input {
     width: 100%;
     color: #111;
