@@ -1,0 +1,263 @@
+@import url(https://fonts.googleapis.com/css?family=Geologica:100,200,300,regular,500,600,700&display=swap);
+@import url(https://fonts.googleapis.com/css?family=Mulish:regular,600&display=swap);
+@import url(https://fonts.googleapis.com/css?family=Carrois+Gothic:regular&display=swap);
+@font-face {
+  font-family: icons;
+  font-display: swap;
+  src: url(../fonts/icons.woff2) format("woff2");
+  font-weight: 400;
+  font-style: normal
+}
+[class*=_icon-]:before {
+  font-family: icons;
+  font-style: normal;
+  font-weight: 400;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: block
+}
+._icon-trash:before {
+  content: ""
+}
+._icon-inst:before {
+  content: ""
+}
+._icon-play:before {
+  content: ""
+}
+._icon-filter:before {
+  content: ""
+}
+._icon-up:before {
+  content: ""
+}
+._icon-mail:before {
+  content: ""
+}
+._icon-plus:before {
+  content: ""
+}
+._icon-heart-fill:before {
+  content: ""
+}
+._icon-cross:before {
+  content: ""
+}
+._icon-list:before {
+  content: ""
+}
+._icon-ch-down:before {
+  content: ""
+}
+._icon-s-inst:before {
+  content: ""
+}
+._icon-arrow-up:before {
+  content: ""
+}
+._icon-heart:before {
+  content: ""
+}
+._icon-user-header:before {
+  content: ""
+}
+._icon-bag:before {
+  content: ""
+}
+._icon-search:before {
+  content: ""
+}
+._icon-ch-round-right:before {
+  content: ""
+}
+._icon-arrow-right:before {
+  content: ""
+}
+._icon-user:before {
+  content: ""
+}
+._icon-phone:before {
+  content: ""
+}
+._icon-s-fb:before {
+  content: ""
+}
+._icon-s-yt:before {
+  content: ""
+}
+._icon-cross-sharp:before {
+  content: ""
+}
+* {
+  padding: 0;
+  margin: 0;
+  border: 0
+}
+*,
+*::after,
+*::before {
+  box-sizing: border-box
+}
+*::after,
+*::before {
+  display: inline-block
+}
+input:focus,
+textarea:focus {
+  outline: 0
+}
+* {
+  -webkit-tap-highlight-color: transparent
+}
+body,
+html {
+  height: 100%;
+  min-width: 320px;
+  overflow-x: hidden;
+}
+
+/* Центровка всей секции */
+.banner-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #f0f0f0; /* можно убрать или задать как у body */
+}
+
+/* Основной блок баннера */
+.banner {
+    width: 820px;
+    height: 820px;
+    background-image: url("..//img/baner_img/baner_img2.png");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    font-family: 'Geologica', sans-serif;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Закрыть (оставим абсолютным, но локально) */
+.banner-close {
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 37px;
+    padding-right: 37px;
+}
+
+.banner-close p {
+    font-size: 40px;
+    background-color: white;
+    width: 39px;
+}
+
+
+/* Белый блок контента */
+.banner-content {
+    background: white;
+    max-width: 680px;
+    margin: 0 auto;
+    margin-top: 40%;
+    height: 420px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    text-align: center;
+    align-items: center;
+    gap: 20px;
+}
+
+
+.banner-title {
+    font-family: "Geologica";
+    font-size: 48px;
+    font-weight: 200;
+    line-height: 130%;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #1e1e1e;
+    border: 1px solid black;
+    width: 80%;
+    padding: 10px 20px 10px 20px;
+}
+
+.banner-offer {
+    font-family: "Geologica";
+    font-size: 24px;
+    font-weight: 400;
+    text-transform: uppercase;
+    line-height: 140%;
+    letter-spacing: 0.2em;
+    color: #1e1e1e;
+}
+
+.baner_input {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+.baner_input_div {
+    width: 75%;
+    display: flex;
+    border-bottom: 1px solid black;
+}
+
+.baner_input input {
+    width: 100%;
+    color: #111;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    font-family: "Geologica", Regular;
+    font-weight: 300;
+    font-size: 1rem;
+    line-height: 100%;
+    letter-spacing: 2.8px;
+    order: 2;
+}
+
+.baner_input i {
+    color: #aaa;
+    transition: opacity 0.3s ease;
+    padding: 0 10px 0 0;
+    order: 1;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.baner_input input:focus + i,
+.baner_input input:focus::placeholder {
+    opacity: 0;
+    display: none;
+    transition: all 0.3s ease;
+}
+
+.send {
+    background-color: #1E1E1E;
+    padding: 13px 35px 13px 35px;
+    text-align: center;
+    order: 3;
+}
+
+.send h5 {
+    font-family: "Geologica";
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 140%;
+    letter-spacing: 0.16rem;
+    text-transform: uppercase;
+    color: white;
+}

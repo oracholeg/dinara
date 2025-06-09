@@ -1,0 +1,235 @@
+@import url(https://fonts.googleapis.com/css?family=Geologica:100,200,300,regular,500,600,700&display=swap);
+@import url(https://fonts.googleapis.com/css?family=Mulish:regular,600&display=swap);
+@import url(https://fonts.googleapis.com/css?family=Carrois+Gothic:regular&display=swap);
+@font-face {
+  font-family: icons;
+  font-display: swap;
+  src: url(../fonts/icons.woff2) format("woff2");
+  font-weight: 400;
+  font-style: normal
+}
+[class*=_icon-]:before {
+  font-family: icons;
+  font-style: normal;
+  font-weight: 400;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: block
+}
+._icon-trash:before {
+  content: ""
+}
+._icon-inst:before {
+  content: ""
+}
+._icon-play:before {
+  content: ""
+}
+._icon-filter:before {
+  content: ""
+}
+._icon-up:before {
+  content: ""
+}
+._icon-mail:before {
+  content: ""
+}
+._icon-plus:before {
+  content: ""
+}
+._icon-heart-fill:before {
+  content: ""
+}
+._icon-cross:before {
+  content: ""
+}
+._icon-list:before {
+  content: ""
+}
+._icon-ch-down:before {
+  content: ""
+}
+._icon-s-inst:before {
+  content: ""
+}
+._icon-arrow-up:before {
+  content: ""
+}
+._icon-heart:before {
+  content: ""
+}
+._icon-user-header:before {
+  content: ""
+}
+._icon-bag:before {
+  content: ""
+}
+._icon-search:before {
+  content: ""
+}
+._icon-ch-round-right:before {
+  content: ""
+}
+._icon-arrow-right:before {
+  content: ""
+}
+._icon-user:before {
+  content: ""
+}
+._icon-phone:before {
+  content: ""
+}
+._icon-s-fb:before {
+  content: ""
+}
+._icon-s-yt:before {
+  content: ""
+}
+._icon-cross-sharp:before {
+  content: ""
+}
+* {
+  padding: 0;
+  margin: 0;
+  border: 0
+}
+*,
+*::after,
+*::before {
+  box-sizing: border-box
+}
+*::after,
+*::before {
+  display: inline-block
+}
+input:focus,
+textarea:focus {
+  outline: 0
+}
+* {
+  -webkit-tap-highlight-color: transparent
+}
+body,
+html {
+  height: 100%;
+  min-width: 320px;
+  overflow-x: hidden;
+}
+
+/* Центровка всей секции */
+.banner-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #f0f0f0; /* можно убрать или задать как у body */
+}
+
+/* Основной блок баннера */
+.banner {
+    width: 820px;
+    height: 820px;
+    background-image: url("..//img/baner_img/baner_img1.png");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    font-family: 'Geologica', sans-serif;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Закрыть (оставим абсолютным, но локально) */
+.banner-close {
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 37px;
+    padding-right: 37px;
+}
+
+.banner-close p {
+    font-size: 40px;
+    background-color: white;
+    width: 39px;
+}
+
+/* Бейдж -15% (оставим абсолютным, но только его) */
+.banner-badge {
+    background-image: url("..//img/baner_img/Star.png");
+    width: 145px;
+    height: 145px;
+    border-radius: 50%;
+    padding: 1rem 1.2rem;
+    font-size: 14px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    margin-top: -72.5px;
+}
+
+.banner-badge text {
+    font-family: "Geologica";
+    font-weight: 400;
+    font-size: 1.7rem;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    z-index: 2;
+    color: white;
+}
+
+/* Белый блок контента */
+.banner-content {
+    background: white;
+    max-width: 680px;
+    margin: 0 auto;
+    margin-top: 40%;
+    height: 420px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: center;
+    align-items: center;
+}
+
+.banner-subtitle {
+    background: #1e1e1e;
+    color: white;
+    display: inline-block;
+    padding: 4px 12px;
+    font-size: 24px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    margin-bottom: 1.2rem;
+    margin-top: 30px;
+}
+
+.banner-title {
+    font-size: 48px;
+    font-weight: 200;
+    line-height: 130%;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #1e1e1e;
+    margin-bottom: 1rem;
+}
+
+.banner-offer {
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: #1e1e1e;
+}
