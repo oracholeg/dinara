@@ -22,11 +22,18 @@
 			<li><a target="_blank" href="referal.html">Реферальна программа</a></li>
 			<li><a target="_blank" href="wholesale.html">Оптовым покупателям</a></li>
 			<li><a target="_blank" href="thanks.html">Дякуємо</a></li>
-			<ul>
+		</ol>
+
+		<ol class="baners_ol">
+				<h4>Baners</h4>
 				<li><a target="_blank" href="baner1.html">Банер1</a></li>
 				<li><a target="_blank" href="baner2.html">Банер2</a></li>
-			</ul>
-		</ol>
+			</ol>
+
+			<ol class="profile_ol">
+				<h4>Profile</h4>
+				<li><a target="_blank" href="profile_orders.html">MyOrders</a></li>
+			</ol>
 	</div>
 </body>
 <style>
@@ -93,6 +100,7 @@
 		display: flex;
 		flex-direction: column;
 		align-items: flex-start;
+		gap: 20px;
 	}
 
 	@media (max-width: 767px) {
@@ -132,8 +140,12 @@
 		margin: 0px 0px 1.5rem 0px;
 	}
 
-	.rootpage__list {
-		margin: 0px 0px 2.25rem 1.25rem;
+	ol {
+		margin: 0px 0px 0rem 1.25rem;
+	}
+
+	ol > h4 {
+		margin-bottom: 20px;
 	}
 
 	.rootpage__list li:not(:last-child) {
@@ -168,6 +180,16 @@
 	.rootpage__tnx {
 		background: #c22d63;
 		margin: 0px 0px 1rem 0px;
+	}
+
+	.baners_ol {
+		margin-top: 20px;
+		display: flex;
+		flex-direction: column;
+	}
+
+	.baners_ol h4{
+		margin-bottom: 10px;
 	}
 </style>
 
