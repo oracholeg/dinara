@@ -233,3 +233,17 @@ html {
     letter-spacing: 0.2em;
     color: #1e1e1e;
 }
+
+@media (max-width: 600px) {
+  
+  .banner-close {
+    padding-top: 25%;
+    padding-right: 5%;
+  }
+  
+  .banner-content {
+    margin-top: 75%;
+  }
+
+
+}
