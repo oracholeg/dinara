@@ -1098,6 +1098,7 @@ body::after {
     gap: 50px;
 }
 
+
 .top_info {
     display: flex;
     flex-direction: column;
@@ -1144,7 +1145,7 @@ body::after {
     border: 1px solid #E6E6E6;
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 20px;
 }
 
 .email_border h3 {
@@ -1172,7 +1173,6 @@ body::after {
     text-transform: uppercase;
     color: rgba(0, 0, 0, 0.6);
     padding-bottom: 5px;
-    border-bottom: 1px solid #1E1E1E;
     opacity: 1;
     transition: all .3s ease;
 }
@@ -1187,10 +1187,17 @@ body::after {
     transition: all .3s ease;
 }
 
+.cansel_button {
+    background-color: #DC3F6C;
+    padding: 20px 40px 20px 40px;
+    width: 55%;
+    transition: all .3s ease;
+}
+
 .email_border .button {
     background-color: #1E1E1E;
     padding: 20px 50px 20px 50px;
-    width: 55%;
+    width: 35%;
     transition: all .3s ease;
 }
 
@@ -1223,35 +1230,154 @@ body::after {
     cursor: pointer;
 }
 
-/* Горизонтальное выравнивание страны и города */
-.form_row {
+.stats_bottom {
+    width: 100%;
+    padding: 20px;
     display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border: 1px solid #E6E6E6;
+}
+
+
+.line {
+    width: 100%;
+    display: flex;
+}
+
+.left-part {
+    width: 45%;
+}
+
+.right-part {
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.right-part li {
+    list-style: disc;
+}
+
+.stats_name {
+    font-family: "Geologica";
+    font-weight: 200;
+    font-size: 1rem;
+    line-height: 172%;
+    color: black;
+}
+
+.stats_values {
+    font-family: "Geologica";
+    font-weight: 200;
+    font-size: 1rem;
+    line-height: 172%;
+    color: black;
     gap: 20px;
 }
 
-/* Селекты по стилю похожи на инпуты */
+.strong {
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 1.6px;
+    text-transform: uppercase;
+    line-height: 150%;
+    color: black;
+}
+
+.number {
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 1.6px;
+    text-transform: uppercase;
+    line-height: 150%;
+    color: black;
+}
+
 .select {
     font-family: "Geologica";
     font-size: 1rem;
     letter-spacing: 2.8px;
     padding-bottom: 5px;
     border: none;
-    border-bottom: 1px solid #1E1E1E;
     text-transform: uppercase;
     color: rgba(0, 0, 0, 0.6);
     background: transparent;
     outline: none;
-    width: 25%;
+    width: 15%;
+    border: 0 !important;
 }
 
-/* Убираем стрелку в select (опционально) */
 .email_border select::-ms-expand {
     display: none;
+}
+
+.select_title {
+    border: none;
+    outline: none;
+    background: transparent;
+    font-family: "Geologica";
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    color: rgba(0, 0, 0, 0.6);
+    padding: 0 5px;
+    cursor: pointer;
 }
 
 .select__title {
     border: 0;
 }
+
+.select__options {
+    left: -175%;
+}
+
+.input_line {
+    width: 100%;
+    border-bottom: 1px solid #1E1E1E;
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.card_block {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    padding-bottom: 5px;
+}
+
+.card_icon {
+    height: 20px;
+    object-fit: contain;
+}
+
+.card_mask_input {
+    font-family: "Geologica";
+    font-size: 1rem;
+    letter-spacing: 2px;
+    color: rgba(0, 0, 0, 0.7);
+    border: none;
+    outline: none;
+    background: transparent;
+    width: 100%;
+}
+
+.edit_card {
+    width: 100%;
+    text-align: right;
+    margin-top: 5px;
+    font-family: "Geologica";
+    font-size: 0.9rem;
+    text-decoration: underline;
+    cursor: pointer;
+    color: black;
+}
+
+
+
+
 
 
 
@@ -1680,7 +1806,7 @@ body::after {
     }
 
     .email_border h3 {
-        font-size: 20px;
+        font-size: 1rem;
     }
 
     .radio_label input[type="radio"] {
@@ -1696,9 +1822,36 @@ body::after {
         width: 55%;
     }
 
+    .cansel_button {
+        padding: 15px 25px 15px 25px;
+        width: 90%;
+    }
+
     .email_border .button {
-        width: 100%;
+        width: 65%;
         padding: 15px 40px 15px 40px;
+    }
+
+    .left-part {
+        width: 65%;
+    }
+
+    .right-part {
+        width: 55%;
+        align-items: center;
+    }
+
+    .card_icon {
+        width: 29px;
+        height: 10px;
+    }
+
+    .stats_values {
+        gap: 5px;
+    }
+
+    .old-price {
+        font-size: 22px !important;
     }
 
 
