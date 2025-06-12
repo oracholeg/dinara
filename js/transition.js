@@ -1,10 +1,17 @@
-// Открытие и закрытие меню слева в личном кабинете
+// Открытие и закрытие меню слева в личном кабинете // Открытие и закрытие дополнительной информации о товаре справа  на странице заказов в личном кабинете
+
 const trans = document.querySelector('.left_nav');
+const dop_info = document.querySelectorAll('.product-item');
 
 trans.addEventListener('click', function () {
   trans.classList.toggle('open');
 });
 
+dop_info.forEach(item => {
+  item.addEventListener('click', () => {
+    item.classList.toggle('open');
+  });
+});
 
 
 
