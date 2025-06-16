@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
   function updateBorders() {
     boxes.forEach((box, index) => {
       if (radios[index].checked) {
-        box.style.border = "2px solid black"; // активная рамка
+        box.style.border = "1px solid black"; // активная рамка
       } else {
         box.style.border = "1px solid #E6E6E6"; // неактивная рамка
       }

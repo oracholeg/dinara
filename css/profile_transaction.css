@@ -1198,10 +1198,9 @@ body::after {
 .status {
     font-size: 10px;
     font-weight: 600;
-    padding: 3px 8px;
-    border-radius: 2px;
     text-transform: uppercase;
     white-space: nowrap;
+    text-align: center;
 }
 
 .status-new {
@@ -1213,6 +1212,7 @@ body::after {
     text-transform: uppercase;
     background-color: #000;
     color: #fff;
+    padding: 0 3px;
 }
 
 .status-in-process {
@@ -1224,6 +1224,7 @@ body::after {
     text-transform: uppercase;
     background-color: #eee;
     color: #777;
+    padding: 0 3px;
 }
 
 .status-completed {
@@ -1235,6 +1236,7 @@ body::after {
     text-transform: uppercase;
     background-color: #ccf3e6;
     color: #10b981;
+    padding: 0 3px;
 }
 
 .status-canceled {
@@ -1244,8 +1246,9 @@ body::after {
     line-height: 140%;
     letter-spacing: 1.6px;
     text-transform: uppercase;
-    background-color: #fce4e4;
-    color: #dc2626;
+    background-color: rgba(251, 183, 183, 1);
+    color: white;
+    padding: 0 10px;
 }
 
 .pagination {
@@ -1266,7 +1269,7 @@ body::after {
     text-transform: uppercase;
     color: #1F3044;
     cursor: pointer;
-    border-bottom: 2px solid #DFDFDF;
+    border-bottom: 1.5px solid #DFDFDF;
 }
 
 .page-number.active {
@@ -1276,14 +1279,19 @@ body::after {
     line-height: 140%;
     letter-spacing: 0;
     text-transform: uppercase;
-    border-bottom: 2px solid #DFDFDF;
+    border-bottom: 1.5px solid #DFDFDF;
 }
 
 .arrow {
-    font-size: 20px;
+    font-family: "Geologica";
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 140%;
+    letter-spacing: 0;
+    text-transform: uppercase;
     color: #1F3044;
-    border-bottom: 2px solid #DFDFDF;
-    padding: 5px 0 5px 0;
+    cursor: pointer;
+    border-bottom: 1.5px solid #DFDFDF;
 }
 
 
@@ -1491,6 +1499,12 @@ body::after {
     height: 400px;
 }
 
+@media (max-width: 1600px) {
+    .rightside {
+        width: 75%;
+    }
+}
+
 @media (max-width: 1400px) {
     .double-fields {
         gap: 0;
@@ -1511,6 +1525,10 @@ body::after {
 
     .socials h5 {
         color: white;
+    }
+
+    .rightside {
+        width: 70%;
     }
 
     .rightside_div {

@@ -1174,6 +1174,10 @@ body::after {
     align-items: flex-start;
 }
 
+.product-status {
+    white-space: nowrap;
+}
+
 .product-title {
     font-family: "Geologica";
     font-weight: 500;
@@ -1240,8 +1244,6 @@ body::after {
 }
 
 .status-new {
-    padding: 3px 8px;
-    border-radius: 2px;
     white-space: nowrap;
     font-family: "Geologica";
     font-weight: 600;
@@ -1252,6 +1254,7 @@ body::after {
     background-color: #000;
     color: #fff;
     position: relative;
+    padding: 0 3px;
 }
 
 .status span::after {
@@ -1287,9 +1290,8 @@ body::after {
     text-transform: uppercase;
     background-color: #eee;
     color: #777;
-    padding: 3px 8px;
-    border-radius: 2px;
     white-space: nowrap;
+    padding: 0 3px;
 }
 
 .status-completed {
@@ -1301,9 +1303,8 @@ body::after {
     text-transform: uppercase;
     background-color: #ccf3e6;
     color: #10b981;
-    padding: 3px 8px;
-    border-radius: 2px;
     white-space: nowrap;
+    padding: 0 3px;
 }
 
 .status-canceled {
@@ -1313,11 +1314,10 @@ body::after {
     line-height: 140%;
     letter-spacing: 1.6px;
     text-transform: uppercase;
-    background-color: #fce4e4;
-    color: #dc2626;
-    padding: 3px 8px;
-    border-radius: 2px;
+    background-color: rgba(251, 183, 183, 1);
+    color: white;
     white-space: nowrap;
+    padding: 0 10px;
 }
 
 .good {
@@ -1342,7 +1342,7 @@ body::after {
     text-transform: uppercase;
     color: #1F3044;
     cursor: pointer;
-    border-bottom: 2px solid #DFDFDF;
+    border-bottom: 1.5px solid #DFDFDF;
 }
 
 .page-number.active {
@@ -1352,14 +1352,19 @@ body::after {
     line-height: 140%;
     letter-spacing: 0;
     text-transform: uppercase;
-    border-bottom: 2px solid #DFDFDF;
+    border-bottom: 1.5px solid #DFDFDF;
 }
 
 .arrow {
-    font-size: 20px;
+    font-family: "Geologica";
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 140%;
+    letter-spacing: 0;
+    text-transform: uppercase;
     color: #1F3044;
-    border-bottom: 2px solid #DFDFDF;
-    padding: 5px 0 5px 0;
+    cursor: pointer;
+    border-bottom: 1.5px solid #DFDFDF;
 }
 
 
@@ -1566,6 +1571,7 @@ body::after {
 .splide__track--fade>.splide__list>.splide__slide {
     height: 400px;
 }
+
 
 @media (max-width: 1400px) {
     .double-fields {
