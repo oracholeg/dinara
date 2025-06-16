@@ -1124,7 +1124,6 @@ body::after {
     width: 36px;
     height: 36px;
     object-fit: cover;
-    margin-right: 15px;
 }
 
 .product-info {
