@@ -1,0 +1,1245 @@
+html::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    opacity: 0;
+    pointer-events: none;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    z-index: 53;
+}
+
+.popup-show .header::after {
+    opacity: 0.4;
+}
+
+body::after {
+    background-color: rgba(0, 0, 0, .4) !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* РЕГИСТАЦИЯ */
+
+.popup_overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 50;
+}
+
+.popup_show {
+    z-index: 150;
+}
+
+.popup_overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.popup__content {
+    background-color: white;
+    padding: 0;
+}
+
+.popup_content {
+    background: #fff;
+    border-radius: 12px;
+    padding: 30px;
+    max-width: 900px;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+}
+
+.popup_close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 40px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-weight: 200;
+}
+
+.popup_columns {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+
+.popup_image {
+    width: 40%;
+    max-width: 478px;
+    max-height: 750px;
+}
+
+.popup_image video {
+    width: 100%;
+    height: 100%;
+    /* object-fit: cover; */
+}
+
+
+.log_leftside video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.popup_form {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    width: 50%;
+    padding: 30px 0 0 20px;
+}
+
+.popups_title {
+    font-family: "Geologica";
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 140%;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: black;
+}
+
+.switch_text {
+    font-family: "Geologica", Regular;
+    font-size: 18px;
+    color: rgba(30, 30, 30, 0.5);
+    font-weight: 200;
+    line-height: 172%;
+    letter-spacing: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.switch_text a {
+    color: black;
+    border-bottom: 1px solid black;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.input_container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.two_cols {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.two_cols input {
+    flex: 1;
+}
+
+
+.auth-input {
+    width: 47%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid rgba(30, 30, 30, 1);
+}
+
+.auth-input-solo {
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid rgba(30, 30, 30, 1);
+}
+
+.auth-input i {
+    color: #aaa;
+    transition: opacity 0.3s ease;
+    order: 1;
+    padding: 0 10px 0 10px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="password"] {
+    color: #111;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    font-family: "Geologica", Regular;
+    font-weight: 300;
+    font-size: 1rem;
+    line-height: 100%;
+    letter-spacing: 2.8px;
+    order: 2;
+}
+
+input[type="text"]::placeholder,
+input[type="email"]::placeholder,
+input[type="tel"]::placeholder,
+input[type="password"]::placeholder {
+    font-family: "Geologica";
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 2.8px;
+    text-transform: uppercase;
+    color: rgba(30, 30, 30, 0.6);
+}
+
+.auth-input input:focus+i,
+.auth-input input:focus::placeholder,
+.auth-input-solo input:focus+i,
+.auth-input-solo input:focus::placeholder {
+    display: none;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.auth-input-solo {
+    padding-left: 10px;
+}
+
+
+
+
+.auth-social {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.auth-social p {
+    font-family: "Geologica";
+    font-weight: 400;
+    font-size: 0.9rem;
+    line-height: 130%;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    display: flex;
+}
+
+.auth-icons {
+    display: flex;
+    gap: 5px;
+    justify-content: flex-start;
+    transition: all .3s ease;
+    justify-content: center;
+}
+
+
+.auth-icons a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 500;
+    color: #111;
+    text-decoration: none;
+    padding: 5px 10px 5px 10px;
+    transition: all .3s ease;
+}
+
+.auth-icons a:hover {
+    transition: all .3s ease;
+    background-color: rgba(242, 239, 242, 1);
+}
+
+.auth-button {
+    background-color: rgba(0, 0, 0, 1);
+    padding: 15px 30px 15px 30px;
+    transition: all .3s ease;
+    color: white;
+    font-family: "Geologica";
+    font-weight: 600;
+    font-size: 0.85rem;
+    line-height: 140%;
+    letter-spacing: 1.6px;
+    text-transform: uppercase;
+    transition: all .3s ease;
+}
+
+.auth-button:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+    transition: all .3s ease;
+}
+
+.auth-icons a.circle-icon i {
+    background-color: #111;
+    color: white;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+}
+
+.auth-icons a>text {
+    font-family: "Geologica";
+    font-weight: 200;
+    font-size: 16px;
+    line-height: 172%;
+    color: #1E1E1E;
+}
+
+.auth-icons i {
+    font-size: 25px;
+}
+
+
+@media (max-width: 768px) {
+    .popup_columns {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .popup_content {
+        max-height: 95vh;
+        overflow-y: auto;
+    }
+
+    .auth-input {
+        width: 100%;
+    }
+
+    .switch_text {
+        order: 1;
+        flex-direction: column;
+        gap: 20px;
+        width: fit-content;
+    }
+
+    .popups_title {
+        order: 2;
+        text-align: center;
+    }
+
+    form {
+        order: 3;
+    }
+
+    .popup_image {
+        order: 4;
+        width: 100%;
+        max-width: 100%;
+        max-height: 355px;
+        object-fit: cover;
+    }
+
+    .popup_image video {
+        width: 100%;
+        height: 355px;
+        object-fit: cover;
+    }
+
+    .popup_columns {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .popup_form {
+        width: 100%;
+        padding: 30px 15px 30px 15px;
+    }
+
+    .switch_text a {
+        border-bottom: 0px;
+        color: rgba(30, 30, 30, 0.5);
+    }
+
+
+    .switch_text span {
+        border-bottom: 1px solid black;
+        color: black;
+    }
+
+    .two_cols {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .auth-social p {
+        justify-content: center;
+    }
+
+    .auth-icons {
+        flex-wrap: wrap;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Авторизация */
+
+.popup_overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 50;
+}
+
+.popup_show {
+    z-index: 150;
+}
+
+.popup_overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.popup__content {
+    background-color: white;
+    padding: 0;
+}
+
+.popup_content {
+    background: #fff;
+    border-radius: 12px;
+    padding: 30px;
+    max-width: 900px;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+}
+
+.popup_close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 40px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-weight: 200;
+}
+
+.popup_columns {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+
+.popup_image {
+    width: 40%;
+    max-width: 478px;
+    max-height: 750px;
+}
+
+.popup_image video {
+    width: 100%;
+    height: 100%;
+    /* object-fit: cover; */
+}
+
+
+.log_leftside video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.popup_form {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    width: 50%;
+    padding: 30px 0 0 20px;
+}
+
+.popups_title {
+    font-family: "Geologica";
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 140%;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: black;
+}
+
+.login-switch_text {
+    font-family: "Geologica", Regular;
+    font-size: 18px;
+    color: rgba(30, 30, 30, 0.5);
+    font-weight: 200;
+    line-height: 172%;
+    letter-spacing: 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.login-switch_text a {
+    color: black;
+    border-bottom: 1px solid black;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.input_container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.two_cols {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.two_cols input {
+    flex: 1;
+}
+
+
+.login-auth-input {
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid rgba(30, 30, 30, 1);
+}
+
+.auth-input-solo {
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid rgba(30, 30, 30, 1);
+}
+
+.login-auth-input i {
+    color: #aaa;
+    transition: opacity 0.3s ease;
+    order: 1;
+    padding: 0 10px 0 10px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="password"] {
+    color: #111;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    font-family: "Geologica", Regular;
+    font-weight: 300;
+    font-size: 1rem;
+    line-height: 100%;
+    letter-spacing: 2.8px;
+    order: 2;
+}
+
+input[type="text"]::placeholder,
+input[type="email"]::placeholder,
+input[type="tel"]::placeholder,
+input[type="password"]::placeholder {
+    font-family: "Geologica";
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 2.8px;
+    text-transform: uppercase;
+    color: rgba(30, 30, 30, 0.6);
+}
+
+.login-auth-input input:focus+i,
+.login-auth-input input:focus::placeholder,
+.auth-input-solo input:focus+i,
+.auth-input-solo input:focus::placeholder {
+    display: none;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.auth-input-solo {
+    padding-left: 10px;
+}
+
+
+
+
+.auth-social {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    order: 2;
+}
+
+.auth-social p {
+    font-family: "Geologica";
+    font-weight: 400;
+    font-size: 0.9rem;
+    line-height: 130%;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    display: flex;
+}
+
+.auth-icons {
+    display: flex;
+    gap: 5px;
+    justify-content: flex-start;
+    transition: all .3s ease;
+    justify-content: center;
+}
+
+
+.auth-icons a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 500;
+    color: #111;
+    text-decoration: none;
+    padding: 5px 10px 5px 10px;
+    transition: all .3s ease;
+}
+
+.auth-icons a:hover {
+    transition: all .3s ease;
+    background-color: rgba(242, 239, 242, 1);
+}
+
+.auth-button {
+    background-color: rgba(0, 0, 0, 1);
+    padding: 15px 30px 15px 30px;
+    transition: all .3s ease;
+    color: white;
+    font-family: "Geologica";
+    font-weight: 600;
+    font-size: 0.85rem;
+    line-height: 140%;
+    letter-spacing: 1.6px;
+    text-transform: uppercase;
+    transition: all .3s ease;
+    order: 1;
+}
+
+.auth-button:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+    transition: all .3s ease;
+}
+
+.auth-icons a.circle-icon i {
+    background-color: #111;
+    color: white;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+}
+
+.auth-icons a>text {
+    font-family: "Geologica";
+    font-weight: 200;
+    font-size: 16px;
+    line-height: 172%;
+    color: #1E1E1E;
+}
+
+.auth-icons i {
+    font-size: 25px;
+}
+
+
+@media (max-width: 768px) {
+    .popup_columns {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .popup_content {
+        max-height: 95vh;
+        overflow-y: auto;
+    }
+
+    .auth-input {
+        width: 100%;
+    }
+
+    .switch_text {
+        order: 1;
+        flex-direction: column;
+        gap: 20px;
+        width: fit-content;
+    }
+
+    .popups_title {
+        order: 2;
+        text-align: center;
+    }
+
+    form {
+        order: 3;
+    }
+
+    .popup_image {
+        order: 4;
+        width: 100%;
+        max-width: 100%;
+        max-height: 355px;
+        object-fit: cover;
+    }
+
+    .popup_image video {
+        width: 100%;
+        height: 355px;
+        object-fit: cover;
+    }
+
+    .popup_columns {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .popup_form {
+        width: 100%;
+        padding: 30px 15px 30px 15px;
+    }
+
+    .switch_text a {
+        border-bottom: 0px;
+        color: rgba(30, 30, 30, 0.5);
+    }
+
+
+    .switch_text span {
+        border-bottom: 1px solid black;
+        color: black;
+    }
+
+    .two_cols {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .auth-social p {
+        justify-content: center;
+    }
+
+    .auth-icons {
+        flex-wrap: wrap;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Восстановление пароля */
+
+.popup_overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 50;
+}
+
+.popup_show {
+    z-index: 150;
+}
+
+.popup_overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.restore_pass {
+    max-width: 640px;
+    max-height: 460px;
+}
+
+.popup__content {
+    background-color: white;
+    padding: 0;
+}
+
+.popup_content {
+    background: #fff;
+    border-radius: 12px;
+    padding: 30px;
+    max-width: 900px;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+}
+
+.popup_close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 40px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-weight: 200;
+}
+
+.popup_columns {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+
+.popup_image {
+    width: 40%;
+    max-width: 478px;
+    max-height: 750px;
+}
+
+.popup_image video {
+    width: 100%;
+    height: 100%;
+    /* object-fit: cover; */
+}
+
+
+.log_leftside video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.restore-popup_form {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    width: 100%;
+    padding: 50px;
+    max-width: 640px;
+    max-height: 460px;
+}
+
+.restore-popups_title {
+    font-family: "Geologica";
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 140%;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: black;
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.restore-popups_title span {
+    font-family: "Geologica";
+    font-weight: 200;
+    font-size: 16px;
+    line-height: 172%;
+    letter-spacing: 0;
+    color: black;
+    text-transform: none;
+}
+
+.login-switch_text {
+    font-family: "Geologica", Regular;
+    font-size: 18px;
+    color: rgba(30, 30, 30, 0.5);
+    font-weight: 200;
+    line-height: 172%;
+    letter-spacing: 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.login-switch_text a {
+    color: black;
+    border-bottom: 1px solid black;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.input_container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.two_cols {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.two_cols input {
+    flex: 1;
+}
+
+
+.login-auth-input {
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid rgba(30, 30, 30, 1);
+}
+
+.auth-input-solo {
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid rgba(30, 30, 30, 1);
+}
+
+.login-auth-input i {
+    color: #aaa;
+    transition: opacity 0.3s ease;
+    order: 1;
+    padding: 0 10px 0 10px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="password"] {
+    color: #111;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    font-family: "Geologica", Regular;
+    font-weight: 300;
+    font-size: 1rem;
+    line-height: 100%;
+    letter-spacing: 2.8px;
+    order: 2;
+}
+
+input[type="text"]::placeholder,
+input[type="email"]::placeholder,
+input[type="tel"]::placeholder,
+input[type="password"]::placeholder {
+    font-family: "Geologica";
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 2.8px;
+    text-transform: uppercase;
+    color: rgba(30, 30, 30, 0.6);
+}
+
+.login-auth-input input:focus+i,
+.login-auth-input input:focus::placeholder,
+.auth-input-solo input:focus+i,
+.auth-input-solo input:focus::placeholder {
+    display: none;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.auth-input-solo {
+    padding-left: 10px;
+}
+
+
+
+
+.auth-social {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    order: 2;
+}
+
+.auth-social p {
+    font-family: "Geologica";
+    font-weight: 400;
+    font-size: 0.9rem;
+    line-height: 130%;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    display: flex;
+}
+
+.auth-icons {
+    display: flex;
+    gap: 5px;
+    justify-content: flex-start;
+    transition: all .3s ease;
+    justify-content: center;
+}
+
+
+.auth-icons a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 500;
+    color: #111;
+    text-decoration: none;
+    padding: 5px 10px 5px 10px;
+    transition: all .3s ease;
+}
+
+.auth-icons a:hover {
+    transition: all .3s ease;
+    background-color: rgba(242, 239, 242, 1);
+}
+
+.auth-button {
+    background-color: rgba(0, 0, 0, 1);
+    padding: 15px 30px 15px 30px;
+    transition: all .3s ease;
+    color: white;
+    font-family: "Geologica";
+    font-weight: 600;
+    font-size: 0.85rem;
+    line-height: 140%;
+    letter-spacing: 1.6px;
+    text-transform: uppercase;
+    transition: all .3s ease;
+    order: 1;
+}
+
+.auth-button:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+    transition: all .3s ease;
+}
+
+.auth-icons a.circle-icon i {
+    background-color: #111;
+    color: white;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+}
+
+.auth-icons a>text {
+    font-family: "Geologica";
+    font-weight: 200;
+    font-size: 16px;
+    line-height: 172%;
+    color: #1E1E1E;
+}
+
+.auth-icons i {
+    font-size: 25px;
+}
+
+
+@media (max-width: 768px) {
+    .popup_columns {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .popup_content {
+        max-height: 95vh;
+        overflow-y: auto;
+    }
+
+    .auth-input {
+        width: 100%;
+    }
+
+    .switch_text {
+        order: 1;
+        flex-direction: column;
+        gap: 20px;
+        width: fit-content;
+    }
+
+    .popups_title {
+        order: 2;
+        text-align: center;
+    }
+
+    form {
+        order: 3;
+    }
+
+    .popup_image {
+        order: 4;
+        width: 100%;
+        max-width: 100%;
+        max-height: 355px;
+        object-fit: cover;
+    }
+
+    .popup_image video {
+        width: 100%;
+        height: 355px;
+        object-fit: cover;
+    }
+
+    .popup_columns {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .restore-popup_form {
+        width: 100%;
+        padding: 50px 10px 10px 10px;
+    }
+
+    .switch_text a {
+        border-bottom: 0px;
+        color: rgba(30, 30, 30, 0.5);
+    }
+
+
+    .switch_text span {
+        border-bottom: 1px solid black;
+        color: black;
+    }
+
+    .two_cols {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .auth-social p {
+        justify-content: center;
+    }
+
+    .auth-icons {
+        flex-wrap: wrap;
+    }
+}
