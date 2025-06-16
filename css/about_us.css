@@ -418,6 +418,11 @@ body::after {
     padding: 0 .625rem
 }
 
+.border_div {
+    max-width: 116.25rem;
+    margin: 0 auto;
+}
+
 .button {
     color: #fff;
     font-size: 1.25rem;

@@ -1029,6 +1029,16 @@ body::after {
     flex-direction: column;
 }
 
+@media (min-width: 1920px) {
+    .border_div {
+        max-width: 116.25rem;
+        margin: 0 auto;
+        transform: translateX(0);
+        left: 0;
+    }
+
+}
+
 .title_div {
     width: 100%;
     display: flex;
