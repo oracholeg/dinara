@@ -218,3 +218,33 @@ document.addEventListener("DOMContentLoaded", function () {
     dotsContainer.querySelectorAll('.dot')[index].classList.add('active');
   }
 });
+
+
+
+
+
+
+// Переключение сердечка на странице Любимое
+
+document.addEventListener("DOMContentLoaded", function () {
+  const hearts = document.querySelectorAll(".fav-heart");
+
+  hearts.forEach((heart) => {
+    heart.addEventListener("click", () => {
+      heart.classList.toggle("active");
+    });
+  });
+});
+
+
+
+// мобильный селект на странице Любимое
+document.addEventListener('DOMContentLoaded', () => {
+  const dotsButton = document.querySelector('.triple_dots');
+  const dotsSelect = document.querySelector('.select-dots');
+
+  dotsButton.addEventListener('click', (e) => {
+    e.preventDefault();
+    dotsSelect.classList.toggle('hidden_menu_dots');
+  });
+});
