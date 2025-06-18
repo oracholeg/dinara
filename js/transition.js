@@ -248,3 +248,25 @@ document.addEventListener('DOMContentLoaded', () => {
     dotsSelect.classList.toggle('hidden_menu_dots');
   });
 });
+
+
+
+
+
+
+const btn = document.querySelector('.custom-select-btn');
+const options = document.querySelector('.custom-select-options');
+
+btn.addEventListener('click', (e) => {
+  e.stopPropagation();
+  options.classList.toggle('hidden');
+});
+
+options.querySelectorAll('div').forEach(opt => {
+  opt.addEventListener('click', () => {
+    btn.textContent = opt.textContent;
+    options.classList.add('hidden');
+  });
+});
+
+document.addEventListener('click', () => options.classList.add('hidden'));

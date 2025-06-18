@@ -202,11 +202,11 @@
                 </div>
 
                 <div class="filter">
-                    <p>Filter:</span>
+                    <p>Filter:</p>
 
-                        <span>newest</span>
-                        <span>lower price</span>
-                        <span>by name</span>
+                    <span>newest</span>
+                    <span>lower price</span>
+                    <span>by name</span>
                 </div>
 
                 <div class="buy">
@@ -219,12 +219,17 @@
             <div class="top_menu_mobile">
 
                 <a href="#" class="clear_all mobile_clear"><button>buy selected (1)</button></a>
-                <select class="select-sort">
-                    <option value="" disabled selected hidden>SORT</option>
-                    <option value="newest">NEWEST</option>
-                    <option value="lower_price">LOWER PRICE</option>
-                    <option value="by_name">BY NAME</option>
-                </select>
+
+                <div class="custom-select-wrapper">
+                    <button class="custom-select-btn">SORT</button>
+                    <span class="sort-arrow">&#709;</span>
+
+                    <div class="custom-select-options hidden">
+                        <div data-value="newest">NEWEST</div>
+                        <div data-value="lower_price">LOWER PRICE</div>
+                        <div data-value="by_name">BY NAME</div>
+                    </div>
+                </div>
 
             </div>
 

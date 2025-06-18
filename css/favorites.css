@@ -1189,6 +1189,14 @@ p {
     display: flex;
     flex-direction: column;
     gap: 10px;
+
+    font-family: "Geologica";
+    font-weight: 200;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: rgba(30, 30, 30, 1);
 }
 
 .bottm_card>div {
@@ -1516,4 +1524,69 @@ p {
     .catalog .catalog_card:nth-of-type(n+4) {
         display: none;
     }
+}
+
+
+
+
+.custom-select-wrapper {
+    background-color: #f7f4f7;
+    position: relative;
+    display: inline-block;
+    width: 45%;
+    height: fit-content;
+    max-width: 178px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 5px;
+}
+
+.custom-select-btn {
+    padding: 12px 16px;
+    font-family: Geologica, sans-serif;
+    letter-spacing: 2px;
+    border: none;
+    text-transform: uppercase;
+    cursor: pointer;
+    width: fit-content;
+    text-align: left;
+}
+
+.custom-select-options {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    /* Меняем направление: меню уходит влево */
+    background-color: #f7f4f7;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.custom-select-options div {
+    padding: 12px 16px;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.custom-select-options div:hover {
+    background-color: #e0dede;
+}
+
+.hidden {
+    display: none;
+}
+
+.sort-arrow {
+    display: inline-block;
+    /* Обязательно! */
+    font-size: 14px;
+    /* Размер */
+    transform: scaleX(1.6);
+    /* Растяжение по ширине */
+    transform-origin: center;
+    /* Центр масштабирования */
 }
