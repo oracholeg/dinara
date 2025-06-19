@@ -243,30 +243,76 @@ document.addEventListener('DOMContentLoaded', () => {
   const dotsButton = document.querySelector('.triple_dots');
   const dotsSelect = document.querySelector('.select-dots');
 
-  dotsButton.addEventListener('click', (e) => {
-    e.preventDefault();
-    dotsSelect.classList.toggle('hidden_menu_dots');
-  });
+  if (dotsButton && dotsSelect) {
+    dotsButton.addEventListener('click', (e) => {
+      e.preventDefault();
+      dotsSelect.classList.toggle('hidden_menu_dots');
+    });
+  } else {
+    console.warn('Не найдены элементы .triple_dots или .select-dots');
+  }
 });
 
 
 
 
 
-
+// Мобильный нав на странице Любимое
 const btn = document.querySelector('.custom-select-btn');
 const options = document.querySelector('.custom-select-options');
 
-btn.addEventListener('click', (e) => {
-  e.stopPropagation();
-  options.classList.toggle('hidden');
-});
-
-options.querySelectorAll('div').forEach(opt => {
-  opt.addEventListener('click', () => {
-    btn.textContent = opt.textContent;
-    options.classList.add('hidden');
+if (btn && options) {
+  btn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    options.classList.toggle('hidden');
   });
+
+  options.querySelectorAll('div').forEach(opt => {
+    opt.addEventListener('click', () => {
+      btn.textContent = opt.textContent;
+      options.classList.add('hidden');
+    });
+  });
+
+  document.addEventListener('click', () => options.classList.add('hidden'));
+}
+
+
+
+
+// Карусель, на странице кастомных
+document.addEventListener("DOMContentLoaded", () => {
+  const track = document.querySelector('.carousel-track');
+  const wrapper = document.querySelector('.gallery-carousel-wrapper');
+
+  if (!track || !wrapper) return;
+
+  const originalCards = Array.from(track.children);
+
+  // Дублируем дважды (3 копии в итоге)
+  for (let i = 0; i < 2; i++) {
+    originalCards.forEach(card => {
+      const clone = card.cloneNode(true);
+      track.appendChild(clone);
+    });
+  }
+
+  const oneLoopWidth = originalCards.reduce((acc, card) => acc + card.offsetWidth, 0);
+  const scrollDistance = oneLoopWidth; // ← проскролим ровно на одну копию
+  const duration = scrollDistance / 100; // 100px/sec
+
+  // Создаём/обновляем @keyframes с точным расстоянием
+  const style = document.createElement('style');
+  style.textContent = `
+    @keyframes scrollLeft {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-${scrollDistance}px); }
+    }
+  `;
+  document.head.appendChild(style);
+
+  // Запускаем анимацию
+  track.style.animation = `scrollLeft ${duration}s linear infinite`;
 });
 
-document.addEventListener('click', () => options.classList.add('hidden'));
+

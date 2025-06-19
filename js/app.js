@@ -4425,9 +4425,9 @@
         }
     }
     document.addEventListener("DOMContentLoaded", (function() {
-        var heroSliderEl = document.querySelector(".hero-home__slider");
-        if (heroSliderEl) {
-            var heroSlider = new Splide(heroSliderEl, {
+        var heroSliderEls = document.querySelectorAll(".hero-home__slider");
+        heroSliderEls.forEach((function(sliderEl) {
+            var slider = new Splide(sliderEl, {
                 type: "fade",
                 perPage: 1,
                 arrows: true,
@@ -4444,8 +4444,8 @@
                     }
                 }
             });
-            heroSlider.mount();
-        }
+            slider.mount();
+        }));
         var productsSectionSliderEls = document.querySelectorAll(".products-section__slider");
         productsSectionSliderEls.forEach((function(sliderEl) {
             var slider = new Splide(sliderEl, {
@@ -4569,8 +4569,8 @@
             });
             slider.mount();
         }));
-        const creatorsSlider = document.querySelectorAll(".collection-home__slider");
-        creatorsSlider.forEach(((slider, index) => {
+        const creatorsSliders = document.querySelectorAll(".collection-home__slider");
+        creatorsSliders.forEach(((slider, index) => {
             const parent = slider.closest("[data-slider-parent]");
             let prevArrow = null;
             let nextArrow = null;
@@ -4603,9 +4603,9 @@
             if (prevArrow) prevArrow.addEventListener("click", (() => splideInstance.go("<")));
             if (nextArrow) nextArrow.addEventListener("click", (() => splideInstance.go(">")));
         }));
-        var publicationsSliderEl = document.querySelector(".publications-home__slider");
-        if (publicationsSliderEl) {
-            var publicationsSlider = new Splide(publicationsSliderEl, {
+        var publicationsSliderEls = document.querySelectorAll(".publications-home__slider");
+        publicationsSliderEls.forEach((function(sliderEl) {
+            var slider = new Splide(sliderEl, {
                 perPage: 1,
                 arrows: false,
                 pagination: true,
@@ -4620,10 +4620,10 @@
                     }
                 }
             });
-            publicationsSlider.mount({
+            slider.mount({
                 Grid
             });
-        }
+        }));
         const productSliders = document.querySelectorAll(".main-product__sliders");
         if (productSliders.length) productSliders.forEach((sliderWrapper => {
             const mainSlider = sliderWrapper.querySelector(".main-product__main-slider");
