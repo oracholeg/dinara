@@ -172,6 +172,15 @@ span {
     font-size: 20px;
 }
 
+.header__label span {
+    text-align: center;
+    color: #fff;
+    font-size: .875rem;
+    font-weight: 300;
+    letter-spacing: .25rem;
+    text-transform: uppercase;
+}
+
 h2 {
     font-family: "Geologica";
     font-weight: 400;
@@ -382,6 +391,79 @@ body::after {
     opacity: 0;
     transition: opacity .3s
 }
+
+.header_container {
+    display: flex;
+    align-items: center;
+    width: 97%;
+    margin: 0 auto;
+    padding: 0 .625rem;
+    justify-content: space-between;
+}
+
+
+.header__search {
+    display: none;
+    background: white;
+    padding: 10px 0;
+}
+
+.header__search.active {
+    display: flex;
+    justify-content: center;
+    max-height: 91px;
+}
+
+.search_container {
+    display: flex;
+    width: 85%;
+}
+
+.search-form {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #000;
+    flex-grow: 1;
+    width: 100%;
+    margin: 0 20px;
+    max-width: 1481px;
+}
+
+.search-form input {
+    border: none !important;
+    font-size: 1.2rem;
+    padding: 10px;
+    outline: none;
+}
+
+.search-form span {
+    font-size: 1.2rem;
+    margin-right: 10px;
+}
+
+.search-close {
+    background: none;
+    border: none;
+    font-size: 34px;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .lock body {
     overflow: hidden;
@@ -1222,6 +1304,99 @@ textarea:focus {
 .textarea-field:focus-within::after {
     opacity: 0;
 }
+
+
+
+
+
+.header_container {
+    display: flex;
+    align-items: center;
+    width: 97%;
+    margin: 0 auto;
+    padding: 0 .625rem;
+    justify-content: space-between;
+}
+
+
+.header__search {
+    display: none;
+    background: white;
+    padding: 10px 0;
+}
+
+.header__search.active {
+    display: flex;
+    justify-content: center;
+    max-height: 91px;
+}
+
+.search_container {
+    display: flex;
+    width: 85%;
+}
+
+.search-form {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #000;
+    flex-grow: 1;
+    width: 100%;
+    margin: 0 20px;
+    max-width: 1481px;
+}
+
+.search-form input {
+    border: none !important;
+    font-size: 1.2rem;
+    padding: 10px;
+    outline: none;
+}
+
+.search-form span {
+    font-size: 1.2rem;
+    margin-right: 10px;
+}
+
+.search-close {
+    background: none;
+    border: none;
+    font-size: 34px;
+    cursor: pointer;
+}
+
+
+
+@media (max-width: 600px) {
+
+    .header__search.active .header__logo {
+        display: none;
+    }
+
+    .header__search.active {
+        max-height: 93px;
+    }
+
+    .header__search {
+        padding: 20px 0;
+    }
+
+    .header_container {
+        width: 100%;
+    }
+
+    .search_container {
+        width: 100%;
+    }
+}
+
+
+
+
+
+
+
+
 
 /* Адаптив */
 @media (max-width: 540px) {
@@ -2378,6 +2553,26 @@ textarea:focus {
 }
 
 @media (max-width: 600px) {
+
+    .header__search.active .header__logo {
+        display: none;
+    }
+
+    .header__search.active {
+        max-height: 93px;
+    }
+
+    .header__search {
+        padding: 20px 0;
+    }
+
+    .header_container {
+        width: 100%;
+    }
+
+    .search_container {
+        width: 100%;
+    }
 
     .breadcrumbs__container {
         white-space: nowrap;

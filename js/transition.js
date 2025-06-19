@@ -316,3 +316,28 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
+
+
+
+
+// Поиск в шапке
+document.addEventListener("DOMContentLoaded", () => {
+  const searchBtn = document.querySelector('.header__actions-btn._icon-search');
+  const searchBlock = document.querySelector('.header__search');
+  const headerBottom = document.querySelector('.header__bottom');
+  const closeBtn = document.querySelector('.search-close');
+
+  if (searchBtn && searchBlock && headerBottom && closeBtn) {
+    searchBtn.addEventListener('click', () => {
+      headerBottom.style.display = 'none';
+      searchBlock.classList.add('active');
+    });
+
+    closeBtn.addEventListener('click', () => {
+      headerBottom.style.display = '';
+      searchBlock.classList.remove('active');
+    });
+  }
+});
+
+
