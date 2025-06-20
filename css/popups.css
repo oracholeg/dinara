@@ -1580,7 +1580,7 @@ html {
     max-width: 680px;
     margin: 0 auto;
     margin-top: 40%;
-    height: 420px;
+    height: auto;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -1602,6 +1602,7 @@ html {
     border: 1px solid black;
     width: 80%;
     padding: 10px 20px 10px 20px;
+    margin-top: 20px;
 }
 
 .banner-offer-2 {
