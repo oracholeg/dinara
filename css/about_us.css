@@ -1238,7 +1238,7 @@ textarea:focus {
 
 
 
-.header_container {
+/* .header_container {
     display: flex;
     align-items: center;
     width: 97%;
@@ -1318,7 +1318,7 @@ textarea:focus {
     .search_container {
         width: 100%;
     }
-}
+} */
 
 /* Адаптив */
 @media (max-width: 540px) {
