@@ -265,6 +265,9 @@ body::after {
     display: flex;
     flex-direction: column;
     overflow: visible !important;
+    position: sticky;
+    top: 0;
+    z-index: 53;
 }
 
 @supports (overflow:clip) {
@@ -834,11 +837,8 @@ page span {
 
 .title_header {
     width: 100%;
+    position: relative;
     height: 700px;
-    background-image: url("..//img/article/article_bg.png");
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
 .article_container {
@@ -931,6 +931,12 @@ page span {
     line-height: 100%;
     text-transform: uppercase;
     letter-spacing: 2.8px;
+    transition: all .5s ease;
+}
+
+.article_name div:nth-of-type(2)>span:hover {
+    border: 1px solid rgba(0, 0, 0, 1);
+    transition: all .5s ease;
 }
 
 .stub {
@@ -1127,7 +1133,7 @@ page span {
     width: 200px;
     height: 100%;
     position: sticky;
-    top: 0;
+    top: 150px;
 }
 
 .left_socials {
@@ -1143,11 +1149,15 @@ page span {
     z-index: 2;
 }
 
-.left_socials>div {
+.left_socials>a {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 20px;
+}
+
+.left_socials>a:hover {
+    cursor: pointer;
 }
 
 .left_socials img {
@@ -1264,6 +1274,9 @@ page span {
 
 
 
+.next_article {
+    justify-content: end;
+}
 
 
 
@@ -1285,7 +1298,8 @@ page span {
     width: 100%;
     justify-content: space-between;
     padding: 20px 0 20px 0;
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 
 .previous_article {
@@ -1366,6 +1380,9 @@ page span {
 .comments {
     grid-column: 1;
     grid-row: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
 }
 
 .comments_massage {
@@ -1458,10 +1475,11 @@ textarea {
 textarea {
     padding-left: 12px;
     padding-right: 32px;
-    resize: vertical;
     min-height: 80px;
-    resize: none;
+    resize: both;
+    overflow: auto;
     max-height: 400px;
+    max-width: 50vw;
 }
 
 input::placeholder,
@@ -1500,7 +1518,11 @@ textarea:focus {
     padding-left: 12px;
 }
 
-.textarea-field::before {
+.textarea-field textarea {
+    position: relative;
+}
+
+.textarea-field textarea::before {
     content: "";
     position: absolute;
     bottom: 28px;
@@ -1578,11 +1600,10 @@ textarea:focus {
     text-align: left;
     align-items: flex-start;
     justify-content: flex-start;
-
+    top: 125px;
     grid-column: 2;
     grid-row: 1 / span 2;
     position: sticky;
-    top: 0;
     align-self: start;
 }
 
@@ -1591,6 +1612,7 @@ textarea:focus {
     display: flex;
     gap: 13px;
 }
+
 
 .post_tags>span {
     padding: 10px;
@@ -1603,6 +1625,13 @@ textarea:focus {
     font-size: 13px;
     line-height: 100%;
     letter-spacing: 2.8px;
+    transition: all .5s ease;
+    border-bottom: 1px solid transparent;
+}
+
+.post_tags>span:hover {
+    transition: all .5s ease;
+    border-color: #000;
 }
 
 .post form {
