@@ -593,11 +593,18 @@ body::after {
     margin-bottom: 1.875rem
 }
 
+textarea::-webkit-resizer {
+    opacity: 0;
+    width: 20px;
+    height: 20px;
+}
+
 .field {
     display: flex;
     flex-direction: column;
     gap: .1875rem;
-    position: relative
+    position: relative;
+    width: fit-content;
 }
 
 .field__input {
@@ -1476,10 +1483,11 @@ textarea {
     padding-left: 12px;
     padding-right: 32px;
     min-height: 80px;
+    min-width: 50vh;
     resize: both;
     overflow: auto;
     max-height: 400px;
-    max-width: 50vw;
+    max-width: 55vw;
 }
 
 input::placeholder,
@@ -1518,11 +1526,12 @@ textarea:focus {
     padding-left: 12px;
 }
 
-.textarea-field textarea {
+.textarea-field {
     position: relative;
 }
 
-.textarea-field textarea::before {
+
+.textarea-field::before {
     content: "";
     position: absolute;
     bottom: 28px;
